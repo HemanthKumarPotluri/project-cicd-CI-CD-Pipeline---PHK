@@ -26,3 +26,8 @@ ENTRYPOINT ["dotnet", "/app/Widgetario.Web.dll"]
 # The startup command needs to run the DLL from the build:
 WORKDIR /app
 COPY --from=builder /out/ .
+
+ARG BUILD_VERSION=local
+ARG GIT_COMMIT=local
+LABEL build_version=${BUILD_VERSION}
+LABEL commit_sha=${GIT_COMMIT}

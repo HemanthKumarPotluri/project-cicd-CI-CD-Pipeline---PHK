@@ -27,3 +27,7 @@ ENV JRE_VERSION="11.0.12" \
     APP_VERSION="0.4.0"
 # The startup command needs to run the JAR file from the build:
 #  java -jar products-api-0.1.0.jar
+ARG BUILD_VERSION=local
+ARG GIT_COMMIT=local
+LABEL build_version=${BUILD_VERSION}
+LABEL commit_sha=${GIT_COMMIT}

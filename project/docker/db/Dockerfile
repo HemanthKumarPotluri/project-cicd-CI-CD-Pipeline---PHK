@@ -7,3 +7,7 @@ COPY src/db/init-products-db.sh /docker-entrypoint-initdb.d/
 
 ENV POSTGRES_PASSWORD=widgetario
 # Your base image should make it easy to run that script as part of the container startup.
+ARG BUILD_VERSION=local
+ARG GIT_COMMIT=local
+LABEL build_version=${BUILD_VERSION}
+LABEL commit_sha=${GIT_COMMIT}
