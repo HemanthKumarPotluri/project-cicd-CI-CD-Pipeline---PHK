@@ -38,7 +38,7 @@ You should be able to get all the components to build without any errors
 
 🥅 Goals
 
-- Build a Docker image for each component
+- Build a Docker image for each component.
 
 - Verify you can run a container from each image
 
